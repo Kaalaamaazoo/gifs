@@ -106,5 +106,14 @@ body{
 .gif-listing > ul > li > ul > li a:hover {
   color: #2a2f37;
   text-decoration: underline; }
+  
+.loadingIndicator{
+  height: 100%;
+  z-index: 10;
+  position: relative;
+  line-height: 150px;
+  font-size: 250%;
+  display:block;
+}
 
 /* @end main styles */
