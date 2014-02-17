@@ -7,6 +7,7 @@
 
   <header class="page-header">
     <div class="img-preview">
+      <div class="loadingIndicator" id="loadingIndicator"></div>
       <img src="aha/aha.gif" alt="" class="banner-img">
       <img src="" id="preview" class="gif-preview">
     </div>
@@ -19,10 +20,13 @@
 
   <script type="text/javascript">
     var preview = document.getElementById("preview");
+      preview.onload = function(){ console.log('done loading'); document.getElementById("loadingIndicator").innerHTML = "" }; 
 
     function hoverListener(evt) {
       evt.preventDefault()
       preview.src = evt.target.href;
+      el = document.getElementById("loadingIndicator");
+      el.innerHTML = "Loading..."
     };
 
     var links = document.getElementsByClassName("gif");
